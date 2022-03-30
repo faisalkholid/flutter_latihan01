@@ -31,7 +31,7 @@ class _LoginState extends State<Login> {
               child: const Text(
                 "Please login to continue",
                 style: TextStyle(
-                    color: Colors.white38,
+                    color: Colors.amber,
                     fontSize: 15,
                     fontWeight: FontWeight.w400),
               ),
@@ -94,7 +94,9 @@ class _LoginState extends State<Login> {
               child: ClipRRect(
                 borderRadius: BorderRadius.circular(10),
                 child: TextButton(
-                  onPressed: () {},
+                  onPressed: () {
+                    Navigator.pushNamed(context, '/Home');
+                  },
                   child: Text("Log in"),
                   style: TextButton.styleFrom(
                     backgroundColor: Colors.amber,

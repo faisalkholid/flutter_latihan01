@@ -44,11 +44,18 @@ class _OnboardingState extends State<Onboarding> {
                   onPressed: () {
                     Navigator.pushNamed(context, '/Login');
                   },
-                  child: Text("Open the door"),
+                  child: Text(
+                    "Open the door",
+                    style: (TextStyle(color: Colors.amber)),
+                  ),
                   style: ElevatedButton.styleFrom(
-                      primary: Colors.amber,
+                      primary: Colors.white10,
                       onPrimary: Colors.black,
-                      fixedSize: const Size(300, 60),
+                      shape: RoundedRectangleBorder(
+                          //to set border radius to button
+                          borderRadius: BorderRadius.circular(5)),
+                      fixedSize: const Size(350, 60),
+                      side: BorderSide(width: 2, color: Colors.amber),
                       textStyle: TextStyle(fontSize: 15)))),
           SizedBox(
             height: 100,

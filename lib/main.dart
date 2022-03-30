@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
+import 'package:latihan_flutter/home.dart';
 import 'package:latihan_flutter/login.dart';
 import 'package:latihan_flutter/onboarding.dart';
 
@@ -30,6 +31,12 @@ class MyApp extends StatelessWidget {
           if (settings.name == '/Login') {
             return MaterialPageRoute(
               builder: (context) => Login(),
+              settings: settings,
+            );
+          }
+          if (settings.name == '/Home') {
+            return MaterialPageRoute(
+              builder: (context) => Home(),
               settings: settings,
             );
           }
