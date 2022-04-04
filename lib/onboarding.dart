@@ -12,8 +12,7 @@ class _OnboardingState extends State<Onboarding> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Column(
-        mainAxisAlignment: MainAxisAlignment.center,
+      body: ListView(
         children: [
           SizedBox(
             height: 300,
@@ -37,9 +36,8 @@ class _OnboardingState extends State<Onboarding> {
                   TextStyle(color: Colors.amber, fontWeight: FontWeight.normal),
             ),
           ),
-          Spacer(),
+          SizedBox(height: 50),
           Align(
-              alignment: Alignment.bottomCenter,
               child: ElevatedButton(
                   onPressed: () {
                     Navigator.pushNamed(context, '/Login');
@@ -57,9 +55,6 @@ class _OnboardingState extends State<Onboarding> {
                       fixedSize: const Size(350, 60),
                       side: BorderSide(width: 2, color: Colors.amber),
                       textStyle: TextStyle(fontSize: 15)))),
-          SizedBox(
-            height: 100,
-          )
         ],
       ),
     );
